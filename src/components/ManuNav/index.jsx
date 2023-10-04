@@ -23,7 +23,8 @@ function MenuNav() {
           <MenuItem
             activeIcon="../src/assets/icons/comunidade-active.png"
             inactiveIcon="../src/assets/icons/comunidade.png"
-            to="/comunidade">
+            to="/comunidade"
+            active={false}>
             Comunidade
           </MenuItem>
         </Ul>

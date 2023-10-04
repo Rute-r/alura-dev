@@ -12,7 +12,7 @@ const LinkMenu = styled(Link)`
 `;
 
 // eslint-disable-next-line react/prop-types
-function MenuItem({ to, inactiveIcon, activeIcon, children, active = false }) {
+function MenuItem({ to, inactiveIcon, activeIcon, children, active }) {
   return (
     <li>
       <LinkMenu to={to} $active={active}>
