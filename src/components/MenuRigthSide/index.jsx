@@ -3,6 +3,7 @@ import MenuTitle from '../../components/MenuTitle';
 import styled from 'styled-components';
 import DropdownMenu from '../../components/DropdownMenu';
 import ColorPicker from '../../components/ColorPicker';
+import Button from '../../components/Button';
 
 const Container = styled.div`
   display: flex;
@@ -23,6 +24,9 @@ function MenuRigthSide() {
         <DropdownMenu />
         <ColorPicker />
       </Container>
+      <Button size="274px" color="black" backgroundColor="#5081fb">
+        Salvar Projeto
+      </Button>
     </section>
   );
 }
