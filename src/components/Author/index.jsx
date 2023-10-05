@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import author1x from '../../assets/images/author.png';
 
 const Container = styled.div`
-  width: 106px;
+  width: 215px;
   display: flex;
+  justify-content: end;
   align-items: center;
   gap: 8px;
   color: var(--white);

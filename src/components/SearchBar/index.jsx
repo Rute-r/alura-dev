@@ -1,9 +1,9 @@
-import TextField from '../InputField';
+import InputField from '../InputField';
 
 function SearchBar() {
   return (
     <>
-      <TextField placeholder="Busque por algo" width="724px" />
+      <InputField placeholder="Busque por algo" width="752px" />
     </>
   );
 }
