@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { GoDotFill } from 'react-icons/go';
+import Button from '../../components/Button';
 
 const Container = styled.div`
   width: 752px;
@@ -53,14 +54,20 @@ const TextArea = styled.textarea`
 
 function CodeEditor() {
   return (
-    <Container>
-      <Tab>
-        <GoDotFillRed />
-        <GoDotFillYellow />
-        <GoDotFillGreen />
-      </Tab>
-      <TextArea></TextArea>
-    </Container>
+    <section>
+      <Container>
+        <Tab>
+          <GoDotFillRed />
+          <GoDotFillYellow />
+          <GoDotFillGreen />
+        </Tab>
+        <TextArea></TextArea>
+      </Container>
+
+      <Button backgroundColor="#5081fb10" color="#ffffff" size="752px">
+        Visualizar com o highlight
+      </Button>
+    </section>
   );
 }
 
