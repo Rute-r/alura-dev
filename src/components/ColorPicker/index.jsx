@@ -11,10 +11,11 @@ const InputColor = styled.input`
   color: var(--white);
 `;
 
-function ColorPicker() {
+// eslint-disable-next-line react/prop-types
+function ColorPicker({ changeColor }) {
   return (
     <>
-      <InputColor type="color" />
+      <InputColor type="color" onChange={(event) => changeColor(event.target.value)} />
     </>
   );
 }

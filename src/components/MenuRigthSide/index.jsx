@@ -11,7 +11,8 @@ const Container = styled.div`
   gap: 16px;
 `;
 
-function MenuRigthSide() {
+// eslint-disable-next-line react/prop-types
+function MenuRigthSide({ changeColor }) {
   return (
     <section>
       <MenuTitle>Seu Projeto</MenuTitle>
@@ -22,7 +23,7 @@ function MenuRigthSide() {
       <MenuTitle>Personalização</MenuTitle>
       <Container>
         <DropdownMenu />
-        <ColorPicker />
+        <ColorPicker changeColor={changeColor} />
       </Container>
       <Button size="274px" color="black" backgroundColor="#5081fb">
         Salvar Projeto

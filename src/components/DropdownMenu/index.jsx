@@ -8,7 +8,7 @@ const SelectMenu = styled.select`
   background-color: var(--input-color);
   border-radius: 8px;
   font-size: 16px;
-  color: var(--white);
+  color: var(--neutral-white);
   margin: 16px 0;
 `;
 

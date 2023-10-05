@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const LinkMenu = styled(Link)`
+const LinkMenu = styled(NavLink)`
   text-decoration: none;
   display: flex;
   align-items: center;

@@ -5,7 +5,7 @@ import Button from '../../components/Button';
 const Container = styled.div`
   width: 752px;
   height: 366px;
-  background-color: var(--blue-strong);
+  background-color: ${(props) => props.$containerBackgroundColor};
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -14,57 +14,52 @@ const Container = styled.div`
 `;
 
 const Tab = styled.div`
-  background-color: var(--black);
   border: none;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   width: 688px;
-  height: 35px;
+  height: 312px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding-left: 10px;
 `;
 
 const GoDotFillRed = styled(GoDotFill)`
   color: red;
-  transform: scale(1.5);
-  background-color: transparent;
 `;
 
 const GoDotFillYellow = styled(GoDotFill)`
   color: yellow;
-  transform: scale(1.5);
-  background-color: transparent;
 `;
 
 const GoDotFillGreen = styled(GoDotFill)`
   color: green;
-  transform: scale(1.5);
-  background-color: transparent;
 `;
 
-const TextArea = styled.textarea`
-  background-color: var(--black);
-  border: none;
-  border-radius: 0 0 8px 8px;
-  width: 688px;
-  height: 272px;
+const Code = styled.code`
   color: var(--white);
-  resize: none;
+  font-family: var(--code-font);
 `;
 
-function CodeEditor() {
+const DotContainer = styled.div`
+  width: 200px;
+`;
+
+// eslint-disable-next-line react/prop-types
+function CodeEditor({ containerBackgroundColor }) {
   return (
     <section>
-      <Container>
+      <Container $containerBackgroundColor={containerBackgroundColor}>
         <Tab>
-          <GoDotFillRed />
-          <GoDotFillYellow />
-          <GoDotFillGreen />
+          <DotContainer>
+            <GoDotFillRed />
+            <GoDotFillYellow />
+            <GoDotFillGreen />
+          </DotContainer>
+          <Code contentEditable></Code>
         </Tab>
-        <TextArea></TextArea>
       </Container>
 
-      <Button backgroundColor="#5081fb10" color="#ffffff" size="752px">
+      <Button backgroundColor="#5081fb10" color="var(--neutral-white)" size="752px">
         Visualizar com o highlight
       </Button>
     </section>
