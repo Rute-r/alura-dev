@@ -57,7 +57,7 @@ const DotContainer = styled.div`
 const TextHiglighted = styled(SyntaxHighlighter)`
   background-color: transparent;
   width: 670px;
-  height: 270px;
+  height: 280px;
 `;
 
 // eslint-disable-next-line react/prop-types
@@ -79,7 +79,7 @@ function CodeEditor({ containerBackgroundColor, changeText, language, text, them
           </DotContainer>
 
           {active ? (
-            <Code onChange={(event) => changeText(event.target.value)}></Code>
+            <Code onChange={(event) => changeText(event.target.value)}>{text}</Code>
           ) : (
             <TextHiglighted language={language} style={themes[theme]}>
               {text}
