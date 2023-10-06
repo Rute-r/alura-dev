@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { GoDotFill } from 'react-icons/go';
 import Button from '../../components/Button';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import * as themes from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const Container = styled.div`
   width: 752px;
@@ -35,7 +37,7 @@ const GoDotFillGreen = styled(GoDotFill)`
   color: green;
 `;
 
-const Code = styled.code`
+const Code = styled.textarea`
   color: var(--white);
   font-family: var(--code-font);
 `;
@@ -45,7 +47,7 @@ const DotContainer = styled.div`
 `;
 
 // eslint-disable-next-line react/prop-types
-function CodeEditor({ containerBackgroundColor }) {
+function CodeEditor({ containerBackgroundColor, changeText, handleHighlight, language, text, theme }) {
   return (
     <section>
       <Container $containerBackgroundColor={containerBackgroundColor}>
@@ -55,11 +57,15 @@ function CodeEditor({ containerBackgroundColor }) {
             <GoDotFillYellow />
             <GoDotFillGreen />
           </DotContainer>
-          <Code contentEditable></Code>
+
+          <Code onChange={(event) => changeText(event.target.value)}></Code>
+          <SyntaxHighlighter language={language} style={themes[theme]}>
+            {text}
+          </SyntaxHighlighter>
         </Tab>
       </Container>
 
-      <Button backgroundColor="#5081fb10" color="var(--neutral-white)" size="752px">
+      <Button backgroundColor="#5081fb10" color="var(--neutral-white)" size="752px" onClick={handleHighlight}>
         Visualizar com o highlight
       </Button>
     </section>

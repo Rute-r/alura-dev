@@ -18,15 +18,15 @@ function MenuNav() {
       <nav>
         <Ul>
           <MenuItem
-            activeIcon="../src/assets/icons/editor-active.png"
-            inactiveIcon="../src/assets/icons/editor.png"
+            activeIcon="../icons/editor-active.png"
+            inactiveIcon="../icons/editor.png"
             active={splitLocation[1] === '' ? true : false}
             to="/">
             Editor de código
           </MenuItem>
           <MenuItem
-            activeIcon="../src/assets/icons/comunidade-active.png"
-            inactiveIcon="../src/assets/icons/comunidade.png"
+            activeIcon="../icons/comunidade-active.png"
+            inactiveIcon="../icons/comunidade.png"
             active={splitLocation[1] === 'comunidade' ? true : false}
             to="/comunidade">
             Comunidade

@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-const languages = [{ name: 'JavaScript' }, { name: 'HTML' }, { name: 'CSS' }];
-
 const SelectMenu = styled.select`
   padding: 16px;
   border: none;
@@ -12,12 +10,11 @@ const SelectMenu = styled.select`
   margin: 16px 0;
 `;
 
-function DropdownMenu() {
+// eslint-disable-next-line react/prop-types
+function DropdownMenu({ defaultValue, children, changeInput }) {
   return (
-    <SelectMenu>
-      {languages.map((language) => (
-        <option key={language.name}>{language.name}</option>
-      ))}
+    <SelectMenu defaultValue={defaultValue} onChange={(event) => changeInput(event.target.value)}>
+      {children}
     </SelectMenu>
   );
 }

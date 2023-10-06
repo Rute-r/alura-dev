@@ -1,3 +1,5 @@
+import supportedLanguages from 'react-syntax-highlighter/dist/cjs/languages/hljs/supported-languages';
+import * as themes from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import InputField from '../InputField';
 import MenuTitle from '../../components/MenuTitle';
 import styled from 'styled-components';
@@ -12,7 +14,7 @@ const Container = styled.div`
 `;
 
 // eslint-disable-next-line react/prop-types
-function MenuRigthSide({ changeColor }) {
+function MenuRigthSide({ changeColor, changeLanguage, changeTheme }) {
   return (
     <section>
       <MenuTitle>Seu Projeto</MenuTitle>
@@ -22,7 +24,16 @@ function MenuRigthSide({ changeColor }) {
       </Container>
       <MenuTitle>Personalização</MenuTitle>
       <Container>
-        <DropdownMenu />
+        <DropdownMenu defaultValue="javascript" name="languages" changeInput={changeLanguage}>
+          {supportedLanguages.map((language) => (
+            <option key={language}>{language}</option>
+          ))}
+        </DropdownMenu>
+        <DropdownMenu defaultValue="dracula" name="themes" changeInput={changeTheme}>
+          {Object.keys(themes).map((theme, i) => (
+            <option key={i}>{theme}</option>
+          ))}
+        </DropdownMenu>
         <ColorPicker changeColor={changeColor} />
       </Container>
       <Button size="274px" color="black" backgroundColor="#5081fb">
