@@ -11,6 +11,9 @@ const Input = styled.input`
   font-size: 16px;
   color: var(--neutral-white);
   margin: 8px 0;
+  &:hover {
+    background-color: var(--input-hover);
+  }
 `;
 
 function InputField({ placeholder, width, height, type = 'text' }) {

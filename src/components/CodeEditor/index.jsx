@@ -79,7 +79,7 @@ function CodeEditor({ containerBackgroundColor, changeText, language, text, them
           </DotContainer>
 
           {active ? (
-            <Code onChange={(event) => changeText(event.target.value)}>{text}</Code>
+            <Code onChange={(event) => changeText(event.target.value)} value={text}></Code>
           ) : (
             <TextHiglighted language={language} style={themes[theme]}>
               {text}

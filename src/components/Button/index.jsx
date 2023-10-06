@@ -11,6 +11,9 @@ const ButtonStyled = styled.button`
   font-size: 16px;
   margin: 16px 0;
   cursor: pointer;
+  &:active {
+    border: 3px solid var(--blue-light);
+  }
 `;
 
 function Button({ children, size, color, backgroundColor, changeText }) {
