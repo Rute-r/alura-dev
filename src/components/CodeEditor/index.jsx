@@ -3,6 +3,7 @@ import { GoDotFill } from 'react-icons/go';
 import Button from '../../components/Button';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import * as themes from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { useState } from 'react';
 
 const Container = styled.div`
   width: 752px;
@@ -23,6 +24,7 @@ const Tab = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 10px;
+  background-color: var(--black);
 `;
 
 const GoDotFillRed = styled(GoDotFill)`
@@ -40,14 +42,32 @@ const GoDotFillGreen = styled(GoDotFill)`
 const Code = styled.textarea`
   color: var(--white);
   font-family: var(--code-font);
+  background-color: var(--black);
+  width: 670px;
+  height: 270px;
+  border: none;
+  resize: none;
 `;
 
 const DotContainer = styled.div`
+  background-color: transparent;
   width: 200px;
 `;
 
+const TextHiglighted = styled(SyntaxHighlighter)`
+  background-color: transparent;
+  width: 670px;
+  height: 270px;
+`;
+
 // eslint-disable-next-line react/prop-types
-function CodeEditor({ containerBackgroundColor, changeText, handleHighlight, language, text, theme }) {
+function CodeEditor({ containerBackgroundColor, changeText, language, text, theme }) {
+  const [active, setActive] = useState(false);
+
+  function handleClickButton() {
+    setActive(!active);
+  }
+
   return (
     <section>
       <Container $containerBackgroundColor={containerBackgroundColor}>
@@ -58,15 +78,22 @@ function CodeEditor({ containerBackgroundColor, changeText, handleHighlight, lan
             <GoDotFillGreen />
           </DotContainer>
 
-          <Code onChange={(event) => changeText(event.target.value)}></Code>
-          <SyntaxHighlighter language={language} style={themes[theme]}>
-            {text}
-          </SyntaxHighlighter>
+          {active ? (
+            <Code onChange={(event) => changeText(event.target.value)}></Code>
+          ) : (
+            <TextHiglighted language={language} style={themes[theme]}>
+              {text}
+            </TextHiglighted>
+          )}
         </Tab>
       </Container>
 
-      <Button backgroundColor="#5081fb10" color="var(--neutral-white)" size="752px" onClick={handleHighlight}>
-        Visualizar com o highlight
+      <Button
+        backgroundColor="#5081fb10"
+        color="var(--neutral-white)"
+        size="752px"
+        changeText={handleClickButton}>
+        {active ? 'Visualizar com o highlight' : 'Editar código'}
       </Button>
     </section>
   );

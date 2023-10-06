@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import CodeEditor from '../../components/CodeEditor';
 import MenuRigthSide from '../../components/MenuRigthSide';
-// import SyntaxTest from '../../components/SyntaxTest';
 
 function Home() {
   const defaultLanguage = 'javascript';
@@ -21,12 +20,10 @@ function Home() {
 
   function handleLanguage(languageInput) {
     setLanguage(languageInput);
-    console.log(language);
   }
 
   function handleChangeTheme(themeInput) {
     setTheme(themeInput);
-    console.log(theme);
   }
 
   return (
@@ -38,7 +35,6 @@ function Home() {
         language={language}
         theme={theme}
       />
-      {/* <SyntaxTest /> */}
 
       <MenuRigthSide
         changeColor={handleColorChange}

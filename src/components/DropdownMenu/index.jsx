@@ -8,6 +8,9 @@ const SelectMenu = styled.select`
   font-size: 16px;
   color: var(--neutral-white);
   margin: 16px 0;
+  option {
+    background-color: var(--background-color);
+  }
 `;
 
 // eslint-disable-next-line react/prop-types

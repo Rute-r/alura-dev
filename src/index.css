@@ -29,6 +29,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--background-color);
   font-family: var(--font);
+}
+
+body {
+  background-color: var(--background-color);
 }

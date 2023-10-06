@@ -13,10 +13,10 @@ const ButtonStyled = styled.button`
   cursor: pointer;
 `;
 
-function Button({ children, size, color, backgroundColor }) {
+function Button({ children, size, color, backgroundColor, changeText }) {
   return (
     <>
-      <ButtonStyled $size={size} color={color} $backgroundColor={backgroundColor}>
+      <ButtonStyled $size={size} color={color} $backgroundColor={backgroundColor} onClick={changeText}>
         {children}
       </ButtonStyled>
     </>
