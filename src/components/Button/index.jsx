@@ -16,10 +16,10 @@ const ButtonStyled = styled.button`
   }
 `;
 
-function Button({ children, size, color, backgroundColor, changeText }) {
+function Button({ children, size, color, backgroundColor, handleClick }) {
   return (
     <>
-      <ButtonStyled $size={size} color={color} $backgroundColor={backgroundColor} onClick={changeText}>
+      <ButtonStyled $size={size} color={color} $backgroundColor={backgroundColor} onClick={handleClick}>
         {children}
       </ButtonStyled>
     </>
