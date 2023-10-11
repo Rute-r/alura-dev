@@ -15,7 +15,7 @@ const HeaderContainer = styled.header`
   margin: auto;
 
   @media (max-width: 599px) {
-    width: 100vw;
+    width: 90vw;
   }
 `;
 

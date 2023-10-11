@@ -29,11 +29,15 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media (max-width: 599px) {
+    width: 90vw;
+  }
 `;
 
 const TextHiglighted = styled(SyntaxHighlighter)`
   background-color: transparent;
-  width: 452px;
+  width: 98%;
   height: 210px;
   border-radius: 8px;
 `;
@@ -48,6 +52,10 @@ const CardContent = styled.div`
   color: var(--white);
   background-color: var(--black-background);
   border-radius: 0 0 8px 8px;
+
+  @media (max-width: 599px) {
+    width: 90vw;
+  }
 `;
 
 const Title = styled.h2`
@@ -70,6 +78,10 @@ const CardInteractions = styled.div`
   color: var(--white);
   background-color: var(--black-background);
   border-radius: 0 0 8px 8px;
+
+  @media (max-width: 599px) {
+    width: 90vw;
+  }
 `;
 
 const Heart = styled(AiFillHeart)`

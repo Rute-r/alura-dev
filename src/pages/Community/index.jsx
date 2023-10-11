@@ -6,6 +6,10 @@ const Container = styled.section`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 599px) {
+    justify-content: center;
+  }
 `;
 
 function Community() {
