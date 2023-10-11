@@ -4,7 +4,6 @@ import author1x from '../../assets/images/author.png';
 const Container = styled.div`
   width: 106px;
   padding: 12px;
-  margin-left: 109px;
   display: flex;
   justify-content: end;
   align-items: center;

@@ -7,13 +7,18 @@ const Ul = styled.ul`
   list-style: none;
 `;
 
+const Aside = styled.aside`
+  width: 189px;
+  margin-right: 123px;
+`;
+
 function MenuNav() {
   const location = useLocation();
   const { pathname } = location;
   const splitLocation = pathname.split('/');
 
   return (
-    <aside>
+    <Aside>
       <MenuTitle>Menu</MenuTitle>
       <nav>
         <Ul>
@@ -33,7 +38,7 @@ function MenuNav() {
           </MenuItem>
         </Ul>
       </nav>
-    </aside>
+    </Aside>
   );
 }
 

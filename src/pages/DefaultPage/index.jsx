@@ -5,9 +5,9 @@ import styled from 'styled-components';
 
 const Container = styled.main`
   display: flex;
-  justify-content: space-between;
-  width: 90vw;
+  width: 80vw;
   margin: auto;
+  justify-content: space-between;
 `;
 
 function DefaultPage() {

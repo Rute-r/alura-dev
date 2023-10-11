@@ -1,7 +1,23 @@
+import Author from '../../components/Author';
 import Tab from '../../components/Tab';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import * as themes from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styled from 'styled-components';
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { FaComment } from 'react-icons/fa';
+
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    .hoverCard {
+      display: flex;
+    }
+    .hoverContent {
+      border-radius: 0;
+    }
+  }
+`;
 
 const Container = styled.div`
   width: 520px;
@@ -45,10 +61,35 @@ const Description = styled.p`
   line-height: var(--body-line-height);
 `;
 
+const CardInteractions = styled.div`
+  display: none;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+  width: 520px;
+  color: var(--white);
+  background-color: var(--black-background);
+  border-radius: 0 0 8px 8px;
+`;
+
+const Heart = styled(AiFillHeart)`
+  transform: scale(1.5);
+`;
+
+const Comment = styled(FaComment)`
+  transform: scale(1.5);
+`;
+
+const IconsContainer = styled.div`
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+`;
+
 // eslint-disable-next-line react/prop-types
 function ProjectCard({ title, description, backgroundColor, theme, language, code }) {
   return (
-    <div>
+    <Div>
       <Container $containerBackgroundColor={backgroundColor}>
         <Tab>
           <TextHiglighted language={language} style={themes[theme]}>
@@ -56,11 +97,18 @@ function ProjectCard({ title, description, backgroundColor, theme, language, cod
           </TextHiglighted>
         </Tab>
       </Container>
-      <CardContent>
+      <CardContent className="hoverContent">
         <Title>{title}</Title>
         <Description>{description}</Description>
       </CardContent>
-    </div>
+      <CardInteractions className="hoverCard">
+        <IconsContainer>
+          <Comment />
+          <Heart />
+        </IconsContainer>
+        <Author />
+      </CardInteractions>
+    </Div>
   );
 }
 

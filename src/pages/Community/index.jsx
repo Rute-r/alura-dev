@@ -1,5 +1,12 @@
+import styled from 'styled-components';
 import ProjectCard from '../../components/ProjectCard';
 import { useState } from 'react';
+
+const Container = styled.section`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
 
 function Community() {
   const [projects, setProjects] = useState([
@@ -14,7 +21,7 @@ function Community() {
   ]);
 
   return (
-    <>
+    <Container>
       {projects.map((project) => (
         <ProjectCard
           key={project.title}
@@ -25,7 +32,7 @@ function Community() {
           language={project.language}
           theme={project.theme}></ProjectCard>
       ))}
-    </>
+    </Container>
   );
 }
 

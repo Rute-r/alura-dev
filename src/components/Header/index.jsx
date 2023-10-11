@@ -4,7 +4,7 @@ import SearchBar from '../../components/SearchBar';
 import Author from '../../components/Author';
 
 const HeaderContainer = styled.header`
-  width: 90vw;
+  width: 80vw;
   height: 100px;
   display: flex;
   justify-content: space-between;
