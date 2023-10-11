@@ -15,6 +15,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media (max-width: 1199px) {
+    width: 100%;
+  }
 `;
 
 const Code = styled.textarea`

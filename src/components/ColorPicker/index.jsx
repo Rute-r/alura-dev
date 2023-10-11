@@ -9,6 +9,10 @@ const InputColor = styled.input`
   border-radius: 8px;
   font-size: 16px;
   color: var(--white);
+
+  @media (max-width: 1199px) {
+    width: 100%;
+  }
 `;
 
 // eslint-disable-next-line react/prop-types

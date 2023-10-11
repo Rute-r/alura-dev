@@ -8,6 +8,15 @@ const Container = styled.main`
   width: 80vw;
   margin: auto;
   justify-content: space-between;
+
+  @media (max-width: 1199px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 599px) {
+    width: 100vw;
+    align-items: center;
+  }
 `;
 
 function DefaultPage() {

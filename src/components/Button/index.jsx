@@ -17,6 +17,10 @@ const ButtonStyled = styled.button`
   &:hover {
     background-color: ${(props) => props.$backgroundHover};
   }
+
+  @media (max-width: 1199px) {
+    width: 100%;
+  }
 `;
 
 function Button({ children, size, color, backgroundColor, backgroundHover, handleClick }) {

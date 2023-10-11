@@ -14,6 +14,10 @@ const Input = styled.input`
   &:hover {
     background-color: var(--input-hover);
   }
+
+  @media (max-width: 1199px) {
+    width: auto;
+  }
 `;
 
 function InputField({ placeholder, width, height, type = 'text' }) {

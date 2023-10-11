@@ -13,9 +13,15 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   margin: auto;
+
+  @media (max-width: 599px) {
+    width: 100vw;
+  }
 `;
 
 const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
   width: 145px;
   height: 50px;
 `;
@@ -26,7 +32,19 @@ function Header() {
       <LogoContainer>
         <img src={logo} alt="Logo alura dev" />
       </LogoContainer>
-      <SearchBar />
+
+      <Media
+        queries={{
+          small: '(max-width: 599px)',
+          medium: '(min-width: 600px)',
+        }}>
+        {(matches) => (
+          <Fragment>
+            {matches.small && <p>lupa</p>}
+            {matches.medium && <SearchBar />}
+          </Fragment>
+        )}
+      </Media>
       <Media
         queries={{
           small: '(max-width: 599px)',
@@ -35,7 +53,7 @@ function Header() {
         }}>
         {(matches) => (
           <Fragment>
-            {matches.small && <p>I am small!</p>}
+            {matches.small && <BurgerMenu />}
             {matches.medium && <BurgerMenu />}
             {matches.large && <Author />}
           </Fragment>
