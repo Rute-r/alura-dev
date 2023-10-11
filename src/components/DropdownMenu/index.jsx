@@ -11,6 +11,9 @@ const SelectMenu = styled.select`
   option {
     background-color: var(--background-color);
   }
+  &:hover {
+    background-color: var(--input-hover);
+  }
 `;
 
 // eslint-disable-next-line react/prop-types

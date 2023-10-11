@@ -2,12 +2,18 @@ import styled from 'styled-components';
 import author1x from '../../assets/images/author.png';
 
 const Container = styled.div`
-  width: 215px;
+  width: 106px;
+  padding: 12px;
+  margin-left: 109px;
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 8px;
   color: var(--white);
+  &:hover {
+    background-color: var(--input-hover);
+    border-radius: 8px;
+  }
 `;
 
 function Author() {

@@ -36,7 +36,11 @@ function MenuRigthSide({ changeColor, changeLanguage, changeTheme }) {
         </DropdownMenu>
         <ColorPicker changeColor={changeColor} />
       </Container>
-      <Button size="274px" color="black" backgroundColor="#5081fb">
+      <Button
+        size="274px"
+        color="black"
+        backgroundColor="var(--blue-strong)"
+        backgroundHover="var(--blue-medium)">
         Salvar Projeto
       </Button>
     </section>

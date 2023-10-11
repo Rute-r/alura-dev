@@ -14,12 +14,20 @@ const ButtonStyled = styled.button`
   &:active {
     border: 3px solid var(--blue-light);
   }
+  &:hover {
+    background-color: ${(props) => props.$backgroundHover};
+  }
 `;
 
-function Button({ children, size, color, backgroundColor, handleClick }) {
+function Button({ children, size, color, backgroundColor, backgroundHover, handleClick }) {
   return (
     <>
-      <ButtonStyled $size={size} color={color} $backgroundColor={backgroundColor} onClick={handleClick}>
+      <ButtonStyled
+        $size={size}
+        color={color}
+        $backgroundColor={backgroundColor}
+        $backgroundHover={backgroundHover}
+        onClick={handleClick}>
         {children}
       </ButtonStyled>
     </>

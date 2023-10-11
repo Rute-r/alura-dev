@@ -9,6 +9,9 @@ const LinkMenu = styled(NavLink)`
   margin: 16px;
   margin-left: 0;
   color: ${(props) => (props.$active ? '#ffffff' : '#ffffff24')};
+  &:hover {
+    color: #ffffff90;
+  }
 `;
 
 // eslint-disable-next-line react/prop-types

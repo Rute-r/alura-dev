@@ -58,6 +58,7 @@ function CodeEditor({ containerBackgroundColor, changeText, language, text, them
 
       <Button
         backgroundColor="#5081fb10"
+        backgroundHover="var(--input-hover)"
         color="var(--neutral-white)"
         size="752px"
         handleClick={handleClickButton}>
