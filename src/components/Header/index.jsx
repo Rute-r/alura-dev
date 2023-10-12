@@ -28,7 +28,7 @@ const LogoContainer = styled.div`
 
 function Header() {
   return (
-    <HeaderContainer>
+    <HeaderContainer id="outer-container">
       <LogoContainer>
         <img src={logo} alt="Logo alura dev" />
       </LogoContainer>

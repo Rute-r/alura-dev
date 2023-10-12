@@ -2,6 +2,8 @@ import { Outlet } from 'react-router';
 import MenuNav from '../../components/MenuNav';
 import Header from '../../components/Header';
 import styled from 'styled-components';
+import Media from 'react-media';
+import { Fragment } from 'react';
 
 const Container = styled.main`
   display: flex;
@@ -24,7 +26,12 @@ function DefaultPage() {
     <main>
       <Header />
       <Container>
-        <MenuNav />
+        <Media
+          queries={{
+            medium: '(max-width: 1199px)',
+          }}>
+          {(matches) => <Fragment>{matches.medium ? '' : <MenuNav />}</Fragment>}
+        </Media>
         <Outlet />
       </Container>
     </main>
