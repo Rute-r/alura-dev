@@ -9,7 +9,6 @@ const Ul = styled.ul`
 
 const Aside = styled.aside`
   width: 189px;
-  margin-right: 123px;
 `;
 
 function MenuNav() {

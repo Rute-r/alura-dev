@@ -7,7 +7,7 @@ import { Fragment } from 'react';
 
 const Container = styled.main`
   display: flex;
-  width: 80vw;
+  width: 90vw;
   margin: auto;
   justify-content: space-between;
 

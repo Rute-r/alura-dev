@@ -48,7 +48,7 @@ const NavBackground = styled.div`
   width: 254px;
   border-radius: 8px;
 
-  transform: ${(props) => (props.$clicked ? 'scale(1)' : 'scale(0)')};
+  display: ${(props) => (props.$clicked ? 'block' : 'none')};
   transition: transform 0.8s;
 `;
 

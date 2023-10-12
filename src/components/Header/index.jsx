@@ -7,7 +7,7 @@ import Media from 'react-media';
 import { Fragment } from 'react';
 
 const HeaderContainer = styled.header`
-  width: 80vw;
+  width: 90vw;
   height: 100px;
   display: flex;
   justify-content: space-between;
