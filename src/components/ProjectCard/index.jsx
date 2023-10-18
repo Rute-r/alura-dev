@@ -3,7 +3,7 @@ import Tab from '../../components/Tab';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import * as themes from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styled from 'styled-components';
-import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { AiFillHeart } from 'react-icons/ai';
 import { FaComment } from 'react-icons/fa';
 
 const Div = styled.div`

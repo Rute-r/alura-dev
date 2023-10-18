@@ -20,10 +20,10 @@ const Input = styled.input`
   }
 `;
 
-function InputField({ placeholder, width, height, type = 'text' }) {
+function InputField({ placeholder, width, height, type = 'text', changeInput }) {
   return (
     <>
-      <Input placeholder={placeholder} width={width} height={height} type={type} />
+      <Input placeholder={placeholder} width={width} height={height} type={type} onChange={changeInput} />
     </>
   );
 }

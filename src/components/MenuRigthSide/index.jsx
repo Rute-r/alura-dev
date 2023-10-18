@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import supportedLanguages from 'react-syntax-highlighter/dist/cjs/languages/hljs/supported-languages';
 import * as themes from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import InputField from '../InputField';
@@ -13,14 +14,25 @@ const Container = styled.div`
   gap: 16px;
 `;
 
-// eslint-disable-next-line react/prop-types
-function MenuRigthSide({ changeColor, changeLanguage, changeTheme }) {
+function MenuRigthSide({
+  changeColor,
+  changeLanguage,
+  changeTheme,
+  saveProject,
+  changeDescription,
+  changeTitle,
+}) {
   return (
     <section>
       <MenuTitle>Seu Projeto</MenuTitle>
       <Container>
-        <InputField placeholder="Nome do seu projeto" width="272px" />
-        <InputField placeholder="Descrição do seu projeto" width="272px" height="80px" />
+        <InputField placeholder="Nome do seu projeto" width="272px" changeInput={changeTitle} />
+        <InputField
+          placeholder="Descrição do seu projeto"
+          width="272px"
+          height="80px"
+          changeInput={changeDescription}
+        />
       </Container>
       <MenuTitle>Personalização</MenuTitle>
       <Container>
@@ -40,7 +52,8 @@ function MenuRigthSide({ changeColor, changeLanguage, changeTheme }) {
         size="274px"
         color="black"
         backgroundColor="var(--blue-strong)"
-        backgroundHover="var(--blue-medium)">
+        backgroundHover="var(--blue-medium)"
+        handleClick={saveProject}>
         Salvar Projeto
       </Button>
     </section>

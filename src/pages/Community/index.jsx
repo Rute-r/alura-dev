@@ -1,29 +1,22 @@
+/* eslint-disable react/prop-types */
 import styled from 'styled-components';
 import ProjectCard from '../../components/ProjectCard';
-import { useState } from 'react';
+// import { useState } from 'react';
+// import projectJSON from '../../project.json';
 
 const Container = styled.section`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 32px;
 
   @media (max-width: 599px) {
     justify-content: center;
   }
 `;
 
-function Community() {
-  const [projects, setProjects] = useState([
-    {
-      title: 'Meu projeto',
-      description: 'Este é o meu projeto',
-      backgroundColor: '#5081fb',
-      theme: 'dracula',
-      language: 'javascript',
-      code: 'const myConst = 2;',
-    },
-  ]);
-
+function Community({ projects }) {
   return (
     <Container>
       {projects.map((project) => (
