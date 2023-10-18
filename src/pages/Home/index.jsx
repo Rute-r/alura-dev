@@ -31,10 +31,14 @@ function Home({ projects, setProjects }) {
 
   function handleChangeTitle(titleInput) {
     setTitle(titleInput);
+
+    console.log(title);
   }
 
   function handleChangeDescription(descriptionInput) {
     setDescription(descriptionInput);
+
+    console.log(description);
   }
 
   function handleProjects() {

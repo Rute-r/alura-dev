@@ -19,9 +19,9 @@ const Container = styled.section`
 function Community({ projects }) {
   return (
     <Container>
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <ProjectCard
-          key={project.title}
+          key={index}
           backgroundColor={project.backgroundColor}
           code={project.code}
           description={project.description}

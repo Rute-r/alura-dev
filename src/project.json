@@ -1,10 +1,1 @@
-[
-  {
-    "title": "Meu projeto",
-    "description": "Este é o meu projeto",
-    "backgroundColor": "#5081fb",
-    "theme": "dracula",
-    "language": "javascript",
-    "code": "const myConst = 2;"
-  }
-]
+[]

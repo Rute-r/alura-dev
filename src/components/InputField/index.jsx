@@ -23,7 +23,13 @@ const Input = styled.input`
 function InputField({ placeholder, width, height, type = 'text', changeInput }) {
   return (
     <>
-      <Input placeholder={placeholder} width={width} height={height} type={type} onChange={changeInput} />
+      <Input
+        placeholder={placeholder}
+        width={width}
+        height={height}
+        type={type}
+        onChange={(event) => changeInput(event.target.value)}
+      />
     </>
   );
 }
