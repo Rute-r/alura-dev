@@ -6,7 +6,7 @@ Alura Dev é um editor de código que permite o compartilhamento de snippets de 
 
 - Ter nodeJs instalado
 - Clonar projeto com `git clone https://github.com/Rute-r/alura-dev.git`
-- Instalar as dependencias com o comando `npm install` em seu editor de código de escolha
+- Instalar as dependências com o comando `npm install` em seu editor de código de escolha
 - Para iniciar o projeto `npm start`
 
 ## Como utilizar
@@ -17,7 +17,7 @@ Alura Dev é um editor de código que permite o compartilhamento de snippets de 
 - Escolha a linguagem usada para funcionamento correto do highligth.
 - É possivel escolher o tema e a cor de fundo para personalizar seu projeto.
 - Para salvar o seu projeto, clique no botão "Salvar Projeto".
-- Para visualizar o seu projeto basta clicar na aba "Comunidade" no meno a esquerda.
+- Para visualizar o seu projeto basta clicar na aba "Comunidade" no menu a esquerda.
 
 ## Conteúdos
 
@@ -26,7 +26,7 @@ Alura Dev é um editor de código que permite o compartilhamento de snippets de 
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [Processo](#processo)
-  - [Contruido com](#construido-com)
+  - [Construido com](#construido-com)
   - [O que eu aprendi](#oque-eu-aprendi)
   - [Futuras features](#futuras-features)
 
@@ -34,7 +34,7 @@ Alura Dev é um editor de código que permite o compartilhamento de snippets de 
 
 ### O Challenge
 
-Os usuarios serão capazes de:
+Os usuários serão capazes de:
 
 - Editar o código e setar o highlight
 - Salvar o seu projeto na aba comunidades
@@ -74,4 +74,4 @@ Os usuarios serão capazes de:
 - Excluir projeto
 - Salvar projetos no localStorage
 - Barra de pesquisa funcional
-- Pagina de perfil editavel
+- Página de perfil editável
