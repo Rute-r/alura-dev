@@ -2,11 +2,10 @@ import Community from './pages/Community';
 import DefaultPage from './pages/DefaultPage';
 import Home from './pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import projectJSON from './project.json';
 import { useState } from 'react';
 
 function AppRoutes() {
-  const [projects, setProjects] = useState(projectJSON);
+  const [projects, setProjects] = useState([]);
   return (
     <>
       <BrowserRouter>

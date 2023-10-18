@@ -3,8 +3,8 @@ import Tab from '../../components/Tab';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import * as themes from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styled from 'styled-components';
-import { AiFillHeart } from 'react-icons/ai';
-import { FaComment } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
+import { BiSolidEditAlt } from 'react-icons/bi';
 
 const Div = styled.div`
   display: flex;
@@ -84,11 +84,11 @@ const CardInteractions = styled.div`
   }
 `;
 
-const Heart = styled(AiFillHeart)`
+const Delete = styled(MdDelete)`
   transform: scale(1.5);
 `;
 
-const Comment = styled(FaComment)`
+const Edit = styled(BiSolidEditAlt)`
   transform: scale(1.5);
 `;
 
@@ -115,8 +115,8 @@ function ProjectCard({ title, description, backgroundColor, theme, language, cod
       </CardContent>
       <CardInteractions className="hoverCard">
         <IconsContainer>
-          <Comment />
-          <Heart />
+          <Edit />
+          <Delete />
         </IconsContainer>
         <Author />
       </CardInteractions>
