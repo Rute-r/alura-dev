@@ -43,7 +43,7 @@ Os usuarios serão capazes de:
 
 ### Screenshot
 
-![](./public/home.png)
+![](./public/editor-de-texto.png)
 
 ![](./public/comunidade.png)
 
